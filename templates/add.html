@@ -51,7 +51,7 @@
     .i_w {
         width: 700px;
     }
-    input:hover {
+    .input_button input:hover {
         color: #0056b3;
     }
     .basement {
@@ -82,11 +82,11 @@
     <form action="/add" method="post">
         <input class="i_w" type="text" name="title" placeholder="Введите логин">
         <input class="i_w" type="text" name="content" placeholder="Введите текст записи">
-        <input type="submit" value="Добавить!">
+        <div class="input_button"><input type="submit" value="Добавить!"></div>
     </form>
     {% endblock %}</div>
     <div class="basement">{% block basement %}
-        <a href="https://fuzzy-meme-g4qv65474955cxw7-5000.app.github.dev/feedback">Назад</a>
+        <a href="/feedback">Назад</a>
     {% endblock %}</div>
 </body>
 </html>

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            background-color: #f0f0f0;;
+        }
         .header {
             border: 3px black solid;
             text-align: center;
@@ -14,11 +17,20 @@
             background-color: #fff;
             border-radius: 10px;
         }
+        .rectangle_1 {
+            width: 99%;
+            height: 2px;
+            position: absolute;
+            margin-top: 65px;
+            background-color: #000000;
+            z-index: -1;
+        }
         .wall {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            margin-bottom: 50px;
         }
         .container {
             border: 3px black solid;
@@ -30,7 +42,8 @@
             border-radius: 10px;
         }
         .container img {
-            width: 107.2%;
+            width: 107.3%;
+            height: 280px;
             box-sizing: border-box;
             margin: 0px -20px;
             padding: -20px;
@@ -42,8 +55,12 @@
             color: #000000;
             text-decoration: none;
         }
+        .container p {
+            color: #000000;
+            font-size: 17px;
+        }
         .basement {
-            position: absolute;
+            position: fixed;
             bottom: 0;
             left: 0;
             font-size: 30px;
@@ -64,36 +81,60 @@
     {% endblock %}
 </head>
 <body>
+    <div class="rectangle_1"></div>
     <div class="header">{% block header %}
-    <h1>Новости</h1>
+        <h1>Новости</h1>
     {% endblock %}</div>
     <div class="wall">{% block wall %}
         <div class="container">{% block container1 %}
             <a href="#">
             <img src="static/jpeg.jpg">
             <h2>Новость 1</h2>
-            <p>Текст новости</p>
+            <p>вчера я вкусно попил кофе</p>
             </a>
         {% endblock %}</div>
         <div class="container">{% block container2 %}
-            <h2>Новость 2</h2>
-            <p>Текст новости</p>
+            <a href="#">
+            <img src="static/jjpeg.jpg">
+            <h2>ОсторожнО!</h2>
+            <p>время идет</p>
+            </a>
         {% endblock %}</div>
         <div class="container">{% block container3 %}
-            <h2>Новость 3</h2>
-            <p>Текст новости</p>
+            <a href="#">
+                <img src="static/rksi_news.png">
+                <h2>Десять Сталинских ударов</h2>
+                <p>новости РКСИ поражают</p>
+                </a>
         {% endblock %}</div>
         <div class="container">{% block container4 %}
-            <h2>Новость 4</h2>
-            <p>Текст новости</p>
+            <a href="#">
+            <img src="static/rksi.png">
+            <h2>Это было важно для меня</h2>
+            <p>я зашел на сайт РКСИ и было хотел оставить отзыв о качестве образования, но, к сожалению, у меня не оказалось доступа к этой странице</p>
+            </a>
         {% endblock %}</div>
         <div class="container">{% block container5 %}
+            <a href="#">
             <h2>Новость 5</h2>
             <p>Текст новости</p>
+            </a>
+        {% endblock %}</div>
+        <div class="container">{% block container6 %}
+            <a href="#">
+            <h2>Новость 6</h2>
+            <p>Текст новости</p>
+            </a>
+        {% endblock %}</div>
+        <div class="container">{% block container7 %}
+            <a href="#">
+            <h2>Новость 7</h2>
+            <p>Текст новости</p>
+            </a>
         {% endblock %}</div>
     {% endblock %}</div>
     <div class="basement">{% block basement %}
-        <a href="https://fuzzy-meme-g4qv65474955cxw7-5000.app.github.dev/feedback">Обратная связь</a>
+        <a href="/feedback">Обратная связь</a>
     {% endblock %}</div>
 </body>
 </html>
