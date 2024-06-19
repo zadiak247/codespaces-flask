@@ -63,3 +63,8 @@ def delete(id):
    session.commit()
    return redirect('/feedback')
 
+
+@app.route("/IT")
+def IT():
+    return render_template("Burda.html", title="IT")
+

@@ -1,0 +1,14 @@
+.cent_2 {
+	width: 100%;
+}
+.cent_2 img {
+	margin: 10px;
+	width: 250px;
+	height: 200px;
+	border: 2px solid lightgray;
+}
+.cent_2 p {
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
